@@ -19,3 +19,13 @@ incrementFiveButton.addEventListener('click', e => dispatch({ type: "INCREMENT_5
 
 const decrementFiveButton = document.getElementById('decrementFive');
 decrementFiveButton.addEventListener('click', e => dispatch({ type: "DECREMENT_5" }));
+
+const redOption = document.getElementById('red');
+redOption.addEventListener('click', e => dispatch({ type: "DISPLAY_RED" }));
+
+const greenOption = document.getElementById('green');
+greenOption.addEventListener('click', e => dispatch({ type: "DISPLAY_GREEN" }));
+
+const blueOption = document.getElementById('blue');
+blueOption.addEventListener('click', e => dispatch({ type: "DISPLAY_BLUE" }));
+
