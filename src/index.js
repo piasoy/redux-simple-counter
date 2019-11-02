@@ -13,3 +13,9 @@ incrementButton.addEventListener('click', e => dispatch({ type: "INCREMENT" }));
 
 const decrementButton = document.getElementById('decrement');
 decrementButton.addEventListener('click', e => dispatch({ type: "DECREMENT" }));
+
+const incrementFiveButton = document.getElementById('incrementFive');
+incrementFiveButton.addEventListener('click', e => dispatch({ type: "INCREMENT_5" }));
+
+const decrementFiveButton = document.getElementById('decrementFive');
+decrementFiveButton.addEventListener('click', e => dispatch({ type: "DECREMENT_5" }));

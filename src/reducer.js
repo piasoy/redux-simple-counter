@@ -16,6 +16,18 @@ const reducer = (state = initialState, action) => {
         }
     }
 
+    else if (type === "INCREMENT_5") {
+        return {
+            value: state.value + 5
+        }
+    }
+
+    else if (type === "DECREMENT_5") {
+        return {
+            value: state.value - 5
+        }
+    }
+
     
     return state
 }
