@@ -8,17 +8,23 @@ const { subscribe, dispatch, getState } = createStore(reducer);
 subscribe(() => render(getState()))
 
 // Dispatch the "INCREMENT" action every time the +1 button is pressed
-const incrementButton = document.getElementById('increment');
-incrementButton.addEventListener('click', e => dispatch({ type: "INCREMENT" }));
+const incrementOneButton = document.getElementById('incrementOne');
+incrementOneButton.addEventListener('click', e => dispatch({ type: "INCREMENT_1" }));
 
-const decrementButton = document.getElementById('decrement');
-decrementButton.addEventListener('click', e => dispatch({ type: "DECREMENT" }));
+const decrementOneButton = document.getElementById('decrementOne');
+decrementOneButton.addEventListener('click', e => dispatch({ type: "DECREMENT_1" }));
 
 const incrementFiveButton = document.getElementById('incrementFive');
 incrementFiveButton.addEventListener('click', e => dispatch({ type: "INCREMENT_5" }));
 
 const decrementFiveButton = document.getElementById('decrementFive');
 decrementFiveButton.addEventListener('click', e => dispatch({ type: "DECREMENT_5" }));
+
+const incrementButton = document.getElementById('increment');
+incrementButton.addEventListener('click', e => incrementBy());
+
+const decrementButton = document.getElementById('decrement');
+decrementButton.addEventListener('click', e => decrementBy());
 
 const redOption = document.getElementById('red');
 redOption.addEventListener('click', e => dispatch({ type: "DISPLAY_RED" }));
