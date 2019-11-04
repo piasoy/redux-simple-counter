@@ -43,27 +43,14 @@ const reducer = (state = initialState, action) => {
         }
     }
 
-    else if (type === 'DISPLAY_RED') {
+    else if (type === 'DISPLAY_COLOR') {
         return {
             value: state.value,
-            color: state.color = "red"
+            color: action.color
         }
     }
 
-    else if (type === 'DISPLAY_GREEN') {
-        return {
-            value: state.value,
-            color: state.color = "green"
-        }
-    }
-
-    else if (type === 'DISPLAY_BLUE') {
-        return {
-            value: state.value,
-            color: state.color = "blue"
-        }
-    }
-
+    
     
     return state
 }

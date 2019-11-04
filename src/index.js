@@ -26,12 +26,13 @@ incrementButton.addEventListener('click', e => incrementBy());
 const decrementButton = document.getElementById('decrement');
 decrementButton.addEventListener('click', e => decrementBy());
 
-const redOption = document.getElementById('red');
-redOption.addEventListener('click', e => dispatch({ type: "DISPLAY_RED" }));
+const colorOption = document.getElementById('color');
 
-const greenOption = document.getElementById('green');
-greenOption.addEventListener('click', e => dispatch({ type: "DISPLAY_GREEN" }));
+colorOption.addEventListener('change', e => {
+    dispatch({ type: "DISPLAY_COLOR",
+                color: colorOption.value })
+    }
+)
 
-const blueOption = document.getElementById('blue');
-blueOption.addEventListener('click', e => dispatch({ type: "DISPLAY_BLUE" }));
+
 
