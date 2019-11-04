@@ -50,9 +50,25 @@ const reducer = (state = initialState, action) => {
         }
     }
 
-    
+    else if (type === 'SET_COUNTERNUM') {
+        return {
+            value: action.num
+        }
+    }
     
     return state
+}
+
+function getNumInput(){
+    let inputVal = document.getElementById("counterNumber").value
+    let num = parseInt(inputVal)
+    if (typeof num === "number") {
+      
+        dispatch({
+          type: "SET_COUNTERNUM",
+          num: num
+        });
+      }
 }
 
 function incrementBy() {

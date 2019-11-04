@@ -20,19 +20,20 @@ incrementFiveButton.addEventListener('click', e => dispatch({ type: "INCREMENT_5
 const decrementFiveButton = document.getElementById('decrementFive');
 decrementFiveButton.addEventListener('click', e => dispatch({ type: "DECREMENT_5" }));
 
-const incrementButton = document.getElementById('increment');
-incrementButton.addEventListener('click', e => incrementBy());
+// const incrementButton = document.getElementById('increment');
+// incrementButton.addEventListener('click', e => incrementBy());
 
-const decrementButton = document.getElementById('decrement');
-decrementButton.addEventListener('click', e => decrementBy());
+// const decrementButton = document.getElementById('decrement');
+// decrementButton.addEventListener('click', e => decrementBy());
 
 const colorOption = document.getElementById('color');
-
 colorOption.addEventListener('change', e => {
     dispatch({ type: "DISPLAY_COLOR",
                 color: colorOption.value })
     }
 )
 
+const numInput = document.getElementById('counterNumber');
+numInput.addEventListener('input', e => getNumInput());
 
 
